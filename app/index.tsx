@@ -16,13 +16,13 @@ const handleSignup = () => {
 
   return (
     <View style={styles.container}>
-      <View>
+      <View style={styles.buttonContainer}>
         <Text>Welcome to the app!</Text>
-        <TouchableOpacity onPress={handleLogin}>
-          <Text>Login</Text>
+        <TouchableOpacity style={styles.button} onPress={handleLogin}>
+          <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={handleSignup}>
-          <Text>Signup</Text>
+        <TouchableOpacity style={styles.button} onPress={handleSignup}>
+          <Text style={styles.buttonText}>Signup</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -40,12 +40,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   buttonContainer: {
-    marginTop: 20,
+    // marginTop: 20,
+    width: '90%',
+    backgroundColor: '#222',
+    padding: 20,
   },
   button: {
     backgroundColor: '#007BFF',
     padding: 10,
     borderRadius: 5,
+    textAlign: 'center',
+    color: '#fff'
   },
   buttonText: {
     color: '#FFFFFF',
